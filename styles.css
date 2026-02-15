@@ -1,0 +1,131 @@
+:root {
+  color-scheme: light;
+  --bg: #f6f7fb;
+  --card: #ffffff;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --accent: #6366f1;
+  --accent-dark: #4f46e5;
+  --border: #d1d5db;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.container {
+  width: min(940px, 92vw);
+  margin: 2rem auto;
+}
+
+.subtitle {
+  color: var(--muted);
+  margin-top: -0.5rem;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1rem;
+  display: grid;
+  gap: 0.75rem;
+}
+
+input,
+button {
+  font: inherit;
+}
+
+input {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.55rem 0.7rem;
+}
+
+.tag-builder {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.tag-builder button {
+  border: none;
+  border-radius: 8px;
+  width: 2.4rem;
+  font-size: 1.4rem;
+  line-height: 1;
+  background: var(--accent);
+  color: white;
+  cursor: pointer;
+}
+
+.tag-builder button:hover,
+.save:hover {
+  background: var(--accent-dark);
+}
+
+.tag-preview,
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.tag {
+  background: #e0e7ff;
+  color: #312e81;
+  border-radius: 999px;
+  padding: 0.2rem 0.55rem;
+  font-size: 0.85rem;
+}
+
+.save {
+  border: none;
+  border-radius: 8px;
+  padding: 0.6rem 0.85rem;
+  background: var(--accent);
+  color: white;
+  cursor: pointer;
+}
+
+.message {
+  min-height: 1.2rem;
+  margin: 0;
+  color: var(--muted);
+}
+
+.music-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.music-item {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.player {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+}
+
+.music-meta {
+  padding: 0.8rem;
+  display: grid;
+  gap: 0.6rem;
+}
+
+.source-link {
+  color: var(--accent-dark);
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YouTube Music Label App</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>Music Link Board</h1>
+      <p class="subtitle">Paste a YouTube link, then add labels with the + button.</p>
+
+      <section class="card">
+        <label for="youtubeUrl">YouTube URL</label>
+        <input
+          id="youtubeUrl"
+          type="url"
+          placeholder="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        />
+
+        <label>Labels</label>
+        <div class="tag-builder">
+          <input id="tagInput" type="text" placeholder="Type a label" />
+          <button id="addTagButton" type="button" aria-label="Add tag">+</button>
+        </div>
+        <div id="tagPreview" class="tag-preview" aria-live="polite"></div>
+
+        <button id="saveButton" class="save" type="button">Save music</button>
+        <p id="message" class="message"></p>
+      </section>
+
+      <section>
+        <h2>Saved music</h2>
+        <div id="musicList" class="music-list"></div>
+      </section>
+    </main>
+
+    <template id="musicItemTemplate">
+      <article class="music-item">
+        <iframe
+          class="player"
+          loading="lazy"
+          allow="autoplay; encrypted-media; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+        <div class="music-meta">
+          <a class="source-link" target="_blank" rel="noreferrer noopener">Open original link</a>
+          <div class="tags"></div>
+        </div>
+      </article>
+    </template>
+
+    <script src="app.js"></script>
+  </body>
+</html>
